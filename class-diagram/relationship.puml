@@ -2,25 +2,36 @@
 
 package "Arrows" {
     left to right direction
-    ClassA -- ClassB
-    ClassC .. ClassD
+    ArrowTypes -- Solid
+    ArrowTypes .. Dotted    
+    ArrowTypes #-- ClassN
+    ArrowTypes }-- ClassP
+    ArrowTypes +-- ClassR
+    ArrowTypes <--> ClassT
+}
+
+package "Relationship" {
+    left to right direction
+
+
     ClassE <|-- ClassF: Inheritance
     ClassG <-- ClassH : Association
     ClassI *-- ClassJ : Composition
     ClassK o-- ClassL : Aggregation
-    ClassM #-- ClassN
-    ClassO }-- ClassP
-    ClassQ +-- ClassR
-    ClassS <--> ClassT
     ClassU <|.. ClassV: Implementation
+
+    class ArrayList implements List
+    class ArrayList extends AbstractList
+
 }
 
-package "Arrows-Custom" {
+
+package "Arrow Customization" {
     left to right direction
-    Class01 <--[#red]--> Class02
-    Class03 --[#blue,dotted,thickness=2]--> Class04 : Blue dashed
-    Class05 "1" ----> "0..*" Class06: Cardinality
-    Class07 --[hidden]-- Class08: Hidden line for adjustment
+    Class01 <-[#red,thickness=3]-> Class02
+    Class01 -[#blue,dotted,bold]-> Class04 : Blue dashed
+    Class01 "1" --> "0..*" Class06: Cardinality
+    Class01 -left[hidden]- Class08: Hidden line for adjustment
        
 }
         
