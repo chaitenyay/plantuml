@@ -1,0 +1,9 @@
+@startuml class-relationship
+
+package "Class Relationship"  {
+    class Square implements Shape {
+
+    }
+}
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml basic-elements
+
+package "Basic Elements" {
+
+class           Class
+interface       interface
+abstract        Abstract
+abstract class  className
+annotation      annotation
+class           class_stereo  <<stereotype>>
+entity          entity
+enum            enum
+exception       exception
+metaclass       metaclass
+protocol        protocol
+stereotype      stereotype
+struct          struct
+circle          circle
+()              circle_short_form
+diamond         diamond
+<>              diamond_short_form
+
+}
+
+@enduml

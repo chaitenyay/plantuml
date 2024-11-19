@@ -1,0 +1,10 @@
+@startuml class-diagram-multipart
+
+!include elements.puml
+
+newpage
+
+!include relationship.puml
+
+
+@enduml
