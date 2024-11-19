@@ -1,9 +1,30 @@
 @startuml class-relationship
 
-package "Class Relationship"  {
-    class Square implements Shape {
-
-    }
+package "Arrows" {
+    left to right direction
+    ClassA -- ClassB
+    ClassC .. ClassD
+    ClassE <|-- ClassF: Inheritance
+    ClassG <-- ClassH : Association
+    ClassI *-- ClassJ : Composition
+    ClassK o-- ClassL : Aggregation
+    ClassM #-- ClassN
+    ClassO }-- ClassP
+    ClassQ +-- ClassR
+    ClassS <--> ClassT
+    ClassU <|.. ClassV: Implementation
 }
 
-@enduml
+package "Arrows-Custom" {
+    left to right direction
+    Class01 <--[#red]--> Class02
+    Class03 --[#blue,dotted,thickness=2]--> Class04 : Blue dashed
+    Class05 "1" ----> "0..*" Class06: Cardinality
+    Class07 --[hidden]-- Class08: Hidden line for adjustment
+       
+}
+        
+    
+
+
+@endum
