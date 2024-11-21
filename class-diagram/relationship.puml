@@ -13,16 +13,45 @@ package "Arrows" {
 package "Relationship" {
     left to right direction
 
+    class Dog extends Animal
+    Animal <|-- Dog: Inheritance
 
-    ClassE <|-- ClassF: Inheritance
-    ClassG <-- ClassH : Association
-    ClassI *-- ClassJ : Composition
-    ClassK o-- ClassL : Aggregation
-    ClassU <|.. ClassV: Implementation
 
-    class ArrayList implements List
-    class ArrayList extends AbstractList
+    class Customer {
+        - String name;
+        - List<Order> orders;
+    }
 
+    class Order {
+        - String orderID;
+    }
+    Customer "1" --> "0..*" Order : Association
+
+
+    class Car {
+        - Engine engine;
+    }
+    class Engine {
+        - String type;
+    }    
+    Car *-- Engine : Composition of (Car has a Engine)
+
+
+
+    class Department {
+        - List<Professor> professors;
+    }
+
+    class Professor {
+        - String name;
+    }
+    Department o-- Professor : Aggregation
+
+
+
+    interface Shape <<interface>> 
+    class Circle implements Shape {}
+    Shape <|.. Square: Realization \n Interface Implementation
 }
 
 
@@ -32,10 +61,6 @@ package "Arrow Customization" {
     Class01 -[#blue,dotted,bold]-> Class04 : Blue dashed
     Class01 "1" --> "0..*" Class06: Cardinality
     Class01 -left[hidden]- Class08: Hidden line for adjustment
-       
 }
         
-    
-
-
 @endum

@@ -10,6 +10,3 @@ PlantUML learning tutorials and tricks
 # Class relationship (Arrow Control)
 
 ![your-UML-diagram-name](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/chaitenyay/plantuml/refs/heads/main/class-diagram/relationship.puml)
-
-
-![your-UML-diagram-name](./class-diagram/elements.png)

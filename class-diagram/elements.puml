@@ -1,25 +1,45 @@
 @startuml basic-elements
 
 package "Basic Elements" {
+    class           Class
+    interface       interface
+    abstract        Abstract
+    abstract class  className
+    annotation      annotation
+    class           class_stereo  <<stereotype>>
+    entity          entity
+    enum            enum
+    exception       exception
+    metaclass       metaclass
+    protocol        protocol
+    stereotype      stereotype
+    struct          struct
+    circle          circle
+    ()              circle_short_form
+    diamond         diamond
+    <>              diamond_short_form
+}
 
-class           Class
-interface       interface
-abstract        Abstract
-abstract class  className
-annotation      annotation
-class           class_stereo  <<stereotype>>
-entity          entity
-enum            enum
-exception       exception
-metaclass       metaclass
-protocol        protocol
-stereotype      stereotype
-struct          struct
-circle          circle
-()              circle_short_form
-diamond         diamond
-<>              diamond_short_form
+package "Method and Attributes" {
+    class Book {
+        + String title
+        - String author
+        # integer noOfPages
+        ~ integer volume
 
+
+        + Book(title, author)
+        # getTitle() String
+        - getAuthor() String
+        ~ getVolume() String
+    }
+}
+
+package "Abstract and Static" {
+    class Dummy {
+        {static} String id
+        {abstract} void methods()
+    }
 }
 
 @enduml
